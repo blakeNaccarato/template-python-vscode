@@ -1,0 +1,11 @@
+{
+	"python.pythonPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+	"terminal.integrated.shellArgs.windows": [
+		"-NoExit",
+		"-Command",
+		//? Set terminal to local Python .venv in workspace folder\
+		"${workspaceFolder}\\.venv\\Scripts\\Activate.ps1;",
+		//? Load environment variables using Set-PsEnv (must "Install-Module -Name Set-PsEnv")
+		"Set-PsEnv;",
+	],
+}

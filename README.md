@@ -4,20 +4,26 @@ Template repo for Python projects in VSCode.
 
 ## Tree
 
-The files that are intended to be duplicated to each project.
+The files that are intended to be duplicated to the root of a project.
 
 ```Text
-template_python_vscode
+template_python_3.7_vscode
 ├── .github
 │   └── workflows
 │       └── close.yml
 ├── .vscode
 │   ├── launch.json
 │   └── settings.json
+├── src
+│   └── package_name
+│       ├── __init__.py
+│       └── package_name.py
 ├── .env
 ├── .flake8
 ├── .gitignore
-└── .pylintrc
+├── .pylintrc
+├── requirements.txt
+└── setup.py
 ```
 
 ## Environment File (`.env`)

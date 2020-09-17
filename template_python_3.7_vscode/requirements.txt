@@ -1,0 +1,27 @@
+# install package_name in editable configuration
+-e .
+
+# build
+setuptools
+wheel
+twine
+
+# document
+doc8
+
+# experiment
+jupyter
+
+# format
+black
+
+# lint
+bandit
+flake8
+flake8-bugbear
+mypy
+prospector[with_vulture]
+pylint
+
+# refactor
+rope

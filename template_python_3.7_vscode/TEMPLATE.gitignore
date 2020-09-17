@@ -1,0 +1,10 @@
+#! REMOVE "TEMPLATE" FROM FILENAME AND THIS COMMENT
+
+# Project-specific
+.vscode/
+.env
+.flake8
+.pylintrc
+requirements.txt
+
+#! DEFAULT PYTHON .GITIGNORE FROM GITHUB GOES BELOW
