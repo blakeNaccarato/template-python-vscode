@@ -1,4 +1,4 @@
-# template_python_vscode
+# template-python-vscode
 
 Template repo for Python projects in VSCode.
 
