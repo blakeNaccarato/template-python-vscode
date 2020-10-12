@@ -1,11 +1,89 @@
 {
+	//! Environment Defaults
+	
+	//* The path to the virtual environment
 	"python.pythonPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+	
+	//* Use PowerShell Core as default integrated terminal for Windows and Linux
+	"terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
 	"terminal.integrated.shellArgs.windows": [
 		"-NoExit",
 		"-Command",
-		//? Set terminal to local Python .venv in workspace folder\
-		"${workspaceFolder}\\.venv\\Scripts\\Activate.ps1;",
 		//? Load environment variables using Set-PsEnv (must "Install-Module -Name Set-PsEnv")
 		"Set-PsEnv;",
+		//? Set terminal to local Python .venv in workspace folder\
+		"${workspaceFolder}\\.venv\\Scripts\\Activate.ps1;",
 	],
+
+    //! Line-width related options
+
+    //* Editor ruler
+    "editor.rulers": [88],
+
+    //* If editor is set to wrap, do so at column 88.
+    "editor.wordWrapColumn": 88,
+
+    "githubPullRequests.pullRequestTitle": "branch",
+
+    //* Formatting configuration
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        //? Default: 88
+        // "--line-length", "88",
+    ],
+
+    //* Extension: Rewrap
+    //? Default: 80
+    "rewrap.wrappingColumn": 88,
+
+    //* Extension: reStructuredText
+    //? use docutils instead of sphinx
+    "restructuredtext.confPath": "",
+    "restructuredtext.linter.extraArgs": [
+        //* Default: 79. Or else ignore line length
+        // "--ignore", "D001",
+        "--max-line-length", "88",
+        //* Trailing whitespace, CRLF warning.
+        "--ignore", "D002,D004",
+    ],
+
+    //* Extension: YAML
+    "yaml.format.printWidth": 88,
+
+    //! Built-in
+    
+    //* Format on save. Adjust CTRL+[SHIFT/ALT]+S in global "keybindings.json" as well
+    "editor.formatOnSave": true,
+
+    //* Enforce whitespace and newlines.
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+
+    //* Periodically fetch changes to tracked repo
+    "git.autofetch": true,
+
+    //! Linting
+
+    "python.linting.enabled": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintEnabled": true,
+    //? Prospector w/ vulture is currently unreliable, see below
+    // "python.linting.prospectorEnabled": true,
+
+    //* Since the presence of a .pylintrc file implictly makes this false, make it explicitly false so we don't get variable behavior across workspaces.
+    "python.linting.pylintUseMinimalCheckers": false,
+
+    //* Linting args
+    //? Ignore "assert" usage globally until bandit update plays nicely with pytest.
+    //? https://www.evernote.com/client/web#?an=true&n=336116c2-1cc7-4240-9ac0-a0ff21a14494&
+    "python.linting.banditArgs": ["-s", "B101"],
+
+    //* The VSCode-Python language server does not yet support linting `vulture` directly, so we install `prospector` and use it only for `vulture`.
+    //? Prospector w/ vulture is currently unreliable
+    // "python.linting.prospectorArgs": [
+    //     "--tool vulture"
+    // ],
 }
