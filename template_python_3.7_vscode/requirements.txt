@@ -1,4 +1,4 @@
-# install package_name in editable configuration
+# install package in editable configuration
 -e .
 
 # build
@@ -20,8 +20,10 @@ bandit
 flake8
 flake8-bugbear
 mypy
-prospector[with_vulture]
 pylint
 
 # refactor
 rope
+
+# test
+pytest
