@@ -2,13 +2,12 @@
 Package description.
 """
 
-from os import path
+import pathlib
 
 from setuptools import find_packages, setup
 
-this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
-    long_description = f.read()
+here = pathlib.Path().resolve()
+long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name="package_name",
