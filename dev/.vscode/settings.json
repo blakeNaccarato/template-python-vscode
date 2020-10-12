@@ -86,4 +86,14 @@
     // "python.linting.prospectorArgs": [
     //     "--tool vulture"
     // ],
+
+    //! Extension: Shell Launcher
+    //* Launches IPython in the virtual environment. A quick-and-dirty shell to try things out in without having to fire up an entire Jupyter notebook. Associated global keybind in "keybindings.json".
+    "shellLauncher.shells.windows": [
+        {
+            "label": "IPython",
+            "shell": "<MUST-HARDCODE-PATH-TO>\\.venv\\Scripts\\python.exe",
+            "args": ["-m", "IPython"],
+        },
+    ],
 }

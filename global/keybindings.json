@@ -1,4 +1,6 @@
 [
+    //! Built-In
+    
     //* Broaden the context of reload window
     {
         "key": "ctrl+r",
@@ -45,5 +47,11 @@
         "key": "ctrl+shift+s",
         "command": "-workbench.action.files.saveLocalFile",
         "when": "remoteFileDialogVisible"
+    },
+
+    //! Extension: Shell Launcher
+    {
+        "key": "ctrl+alt+1",
+        "command": "shellLauncher.launch"
     },
 ]
