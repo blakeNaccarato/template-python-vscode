@@ -1,6 +1,6 @@
 [flake8]
 max-line-length = 88
-ignore = 
+ignore =
         F401,  ; imported but unused, duplicates pylint(unused-import)
         F821,  ; Undefined variable 'write_config', duplicates pylint(undefined-variable)
         F841,  ; local variable 'workbooks' is assigned to but never used, duplicates pylint(unused-variable)
@@ -11,3 +11,4 @@ ignore =
         W291,  ; trailing whitespace, duplicates pylint(trailing-whitespace)
         W292,  ; no newline at end of file, duplicates pylint(missing-final-newline)
         W293,  ; blank line contains whitespace, duplicates pylint(trailing-whitespace)
+        W503,  ; line break before binary operator, conflict with black
