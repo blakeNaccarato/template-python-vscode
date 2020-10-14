@@ -1,4 +1,5 @@
 [flake8]
+max-line-length = 88
 ignore = 
         F401,  ; imported but unused, duplicates pylint(unused-import)
         F821,  ; Undefined variable 'write_config', duplicates pylint(undefined-variable)
