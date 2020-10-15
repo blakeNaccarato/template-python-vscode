@@ -35,6 +35,7 @@
     //* Extension: Rewrap
     //? Default: 80
     "rewrap.wrappingColumn": 88,
+    "rewrap.wholeComment": false,
 
     //* Extension: reStructuredText
     //? use docutils instead of sphinx
