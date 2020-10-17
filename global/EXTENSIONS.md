@@ -6,6 +6,8 @@ Throughout this guide, you will see items `>Extension: Like this (Shortcut)` tha
 
 ## [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 
+Highlights comments that are tagged with "\!", "TODO", "\*", "?", in red, orange, light-green, or blue, respectively. Distinguishes between comments instead of the usual dark green everywhere. More useful for annotating JSON settings files than for code.
+
 ## [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
 
 Similar to setting a debug breakpoint, except it's just a soft link to a line in the code that you're going to frequently.
