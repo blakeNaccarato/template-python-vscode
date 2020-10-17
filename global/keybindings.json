@@ -1,16 +1,6 @@
 [
-    //! Built-In
-    
-    //* Broaden the context of reload window
-    {
-        "key": "ctrl+r",
-        "command": "workbench.action.reloadWindow"
-    },
-    {
-        "key": "ctrl+r",
-        "command": "-workbench.action.reloadWindow",
-        "when": "isDevelopment"
-    },
+    //! Built-in
+
 
     //* Save w/ CTRL+S. Format save w/ CTRL+SHIFT+S. Save-as w/ CTRL+ALT+S
     //? The "editor.formatOnSave" key must be set in "settings.json"
@@ -48,6 +38,16 @@
         "command": "-workbench.action.files.saveLocalFile",
         "when": "remoteFileDialogVisible"
     },
+
+
+    //! Extension: ReWrap
+    //* Toggle ReWrap. Important to disable auto-wrap while in markdown files.
+    {
+        "key": "shift+alt+q",
+        "command": "rewrap.toggleAutoWrap"
+    },
+
+
 
     //! Extension: Shell Launcher
     {

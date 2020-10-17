@@ -1,6 +1,8 @@
 [MESSAGES CONTROL]
-disable = 
-    bad-continuation  ; indentation of multi-line calls, conflict with black
+    
+    disable =
+        bad-continuation  ; indentation of multi-line calls, conflict with black
 
 [FORMAT]
-    max-line-length=88
+    
+    max-line-length = 88
