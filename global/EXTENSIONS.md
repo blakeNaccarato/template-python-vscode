@@ -68,61 +68,118 @@ important_path = os.environ["IMPORTANT_PATH"]
 
 As long as John and Sally keep their own `.env` files (and make sure not to upload them to the shared GitHub repo using `.gitignore`), now the code can be generic and yet it will work for both John and Sally.
 
-
 ## [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
+
+Just syntax highlighting and linting for a certain type of configuration file.
 
 ## [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
 
+Allows plotting a flowchart of the progress of branches, commits, and merges to a repo.
+
 ## [Git Project Manager](https://marketplace.visualstudio.com/items?itemName=felipecaputo.git-project-manager)
+
+Facilitates switching between git project folders from the command palette.
 
 ## [gitflow](https://marketplace.visualstudio.com/items?itemName=vector-of-bool.gitflow)
 
-## [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+Helps with adherence to [git-flow](https://nvie.com/posts/a-successful-git-branching-model/), a tried-and-true branching model. Basically, you do most of your work on the `develop` branch, and the feature/issue branches that merge into it, either through conventional merging or pull requests. Only stable releases and hotfixes get merged to master/main. I mainly use this to automate releases, but it's not entirely necessary.
+
+## [Git Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+
+This allows you to browse Issues and Pull Requests for a GitHub repo, entirely within VSCode. Great for collaboration, as you can perform code review in the environment you're used to, rather than the web interface.
 
 ## [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
+A great visualization of the active project. Shows branches, file history, facilitates comparison of all kinds. A must have.
+
 ## [HTTP/s and relative link checker](https://marketplace.visualstudio.com/items?itemName=blackmist.LinkCheckMD)
+
+Ensure links are working in documentation.
 
 ## [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 
+The main extension for a shared remote workspace.
+
 ## [Live Share Audio](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-audio)
+
+Allows voice calls through VSCode. A bit buggy.
 
 ## [Live Share Whiteboard](https://marketplace.visualstudio.com/items?itemName=lostintangent.vsls-whiteboard)
 
+A collaborative, live whiteboard in the Live Share session.
+
 ## [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
+Core markdown features. Allows refactoring of lists, headings, etc. in Markdown. This very guide is written in Markdown. It's a simple language with symbols that represent headers, lists, links  etc. Essentially surfaces the most important bits of HTML without requiring you to use a bunch of ugly tags.
 
 ## [Markdown+Math](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath)
 
+For entering equations into Markdown. Haven't tried this one out yet.
+
 ## [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+
+Linting for Markdown. Enforces consistency in documentation, but is sometimes a bit aggressive if your use-case deviates too far from Markdown's original intent, for easy layout and hierarchy of sections of text. Complains if you use repeat headings, for example. You will learn when to conform to its recommendations, and when to occasionally suppress its warnings.
 
 ## [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
+Enables virtually all the Python functionality of VSCode. Integrates functionality of language servers, linting, helper extensions, and more. You will come to learn which features are coming from where as you learn more, but for now just install this and configure it the way I describe.
+
 ## [Python Docstring Generator](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring)
+
+A shortcut to insert Numpy-style docstrings as you write code. Ultimately unnecessary, but useful at first while you're still learning docstring conventions.
 
 ## [Python Test Explorer for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=LittleFoxTeam.vscode-python-test-adapter)
 
+Haven't gotten into this yet, but I think it'll serve as a better test runner than the built-in functionality. It seems like it will be to code testing as GitLens is to git.
+
 ## [Test Explorer Status Bar](https://marketplace.visualstudio.com/items?itemName=connorshea.vscode-test-explorer-status-bar)
+
+Puts test info in the bottom status bar of VSCode.
 
 ## [Test Explorer UI](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer)
 
+Part of the Test Explorer suite.
+
 ## [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
+
+Quick-and-dirty highlighting of CSV by coloring columns in-place. Use Data Preview for a more sophisticated view of data.
 
 ## [reStructuredText](https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext)
 
+Allows previewing documentation without having to explicitly rebuild it constantly. Good for interactive building of documentation.
+
 ## [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
+For remoting into Docker containers and others.
 
 ## [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 
+For SSH into servers and the like.
+
 ## [Remote - SSH: Editing Configuration Files](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit)
+
+Helper extension to Remote - SSH.
 
 ## [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
 
+A must-have if you're working in WSL. You will eventually come across software that only works on Unix-like systems, and WSL will help you bridge that gap.
+
 ## [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap)
+
+For automatically wrapping text as you write. Performs hard-wrapping, useful in code comments and docstrings. Currently, I only soft-wrap documentation and Markdown, though that may change in the future.
 
 ## [Shell Launcher](https://marketplace.visualstudio.com/items?itemName=Tyriar.shell-launcher)
 
+A way to launch multiple shells (PowerShell, Bash, IPython, etc.) besides the default one.
+
 ## [Test Explorer Live Share](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer-liveshare)
+
+For using the extended Test Explorer UI in a Live Share session.
 
 ## [YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 
+Another configuration file format helper extension. YAML is pretty common in Python libraries, so this is helpful.
+
 ## [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
+
+Adds icons to files/folders in the Explorer sidebar. Makes things a bit more visually distinct than the minimalist folding arrows of the default icon set.
