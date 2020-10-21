@@ -116,12 +116,12 @@
 
 
     //! Extension: Shell Launcher
-    //* Launches IPython in the virtual environment. A quick-and-dirty shell to try things out in without having to fire up an entire Jupyter notebook. Associated global keybind in "keybindings.json".
     "shellLauncher.shells.windows": [
         {
-            "label": "IPython",
-            "shell": "<MUST-HARDCODE-PATH-TO>\\.venv\\Scripts\\python.exe",
-            "args": ["-m", "IPython"],
+            //* Launches IPython in the virtual environment. Lets you try things out in without having to fire up an entire Jupyter notebook. Associated global keybind in "keybindings.json".
+            "label": "IPython (.venv)",
+            "shell": "pwsh.exe",
+            "args": ["-NoExit", "-Command", "python", "-m", "IPython"],
         },
     ],
 }
