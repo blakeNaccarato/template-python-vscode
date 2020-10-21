@@ -101,6 +101,12 @@
 
 
 
+    //! Extension: Python
+    //* Required to use Python from the virtual environment instead of global Python
+    "python.pythonPath": "${workspaceFolder}\\.venv",
+
+
+
     //! Extension: Python Docstring Generator
     "autoDocstring.guessTypes": false,
     "autoDocstring.docstringFormat": "numpy",
