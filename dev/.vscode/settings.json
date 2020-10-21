@@ -110,8 +110,8 @@
     //! Extension: reStructuredText
     "restructuredtext.languageServer.disabled": false,
     "restructuredtext.linter.name": "rstcheck",
-    "restructuredtext.confPath": "${workspaceFolder}\\docs_src",
-    "restructuredtext.builtDocumentationPath": "${workspaceFolder}\\docs",
+    "restructuredtext.confPath": "${workspaceFolder}\\docs",
+    "restructuredtext.builtDocumentationPath": "${workspaceFolder}\\docs\\_build",
 
 
 
