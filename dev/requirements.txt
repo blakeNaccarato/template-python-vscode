@@ -7,7 +7,9 @@ wheel
 twine
 
 # document
-doc8
+sphinx
+sphinx-rtd-theme
+rstcheck
 
 # experiment
 jupyter
