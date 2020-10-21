@@ -1,5 +1,5 @@
 # Project-specific
-.vscode
+/.vscode
 .env
 .flake8
 .mypy.ini

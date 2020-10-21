@@ -1,6 +1,9 @@
 {
     //! Environment Defaults
+
+    
     //* Use PowerShell Core as default integrated terminal for Windows
+    //? "To install PowerShell on Windows, download and install package from our GitHub releases page." https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7
     "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
 
 
@@ -8,7 +11,8 @@
     "terminal.integrated.shellArgs.windows": [
 		"-NoExit",
 		"-Command",
-		//? Load environment variables using Set-PsEnv (must "Install-Module -Name Set-PsEnv")
+    	//? Load environment variables using Set-PsEnv (must "Install-Module Set-PsEnv")
+     //? May also need to "Update-Module Set-PsEnv"
 		"Set-PsEnv;",
 		//? Set terminal to local Python .venv in workspace folder\
 		"${workspaceFolder}\\.venv\\Scripts\\Activate.ps1;",
@@ -18,37 +22,35 @@
 
     //! Line-width related options
 
-
-    //* If editor is set to wrap, do so at column 88.
+    
+    //* Soft wrap settings
+    
+    //? Set wrapping column
+    "editor.wordWrapColumn": 88,
     "editor.rulers": [88],
 
+    //? Soft wrap only in markdown and JSON with Comments (aka VSCode settings)
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+    },
+    "[jsonc]": {
+        "editor.wordWrap": "wordWrapColumn"
+    },
 
-    //* If editor is set to wrap, do so at column 88.
-    "editor.wordWrapColumn": 88,
-
-    "githubPullRequests.pullRequestTitle": "branch",
+    
+    //* Disable JSON format to prevent JSON with Comments reformat
+    "json.format.enable": false,
 
 
     //* Formatting configuration
     "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        //? Default: 88
-        // "--line-length", "88",
-    ],
-    //? Disable JSON format
-    "json.format.enable": false,
-
+    
 
     //* Extension: Rewrap
     //? Default: 80
-    "rewrap.autoWrap.enabled": true,  // Toggle w/ ALT+Q
+    "rewrap.autoWrap.enabled": false,  // Toggle w/ ALT+Q. // ! Disable for markdown.
     "rewrap.wrappingColumn": 88,
     "rewrap.wholeComment": false,
-
-
-    //* Extension: reStructuredText
-    "restructuredtext.languageServer.disabled": false,
-    "restructuredtext.linter.name": "rstcheck",
 
 
     //* Extension: YAML
@@ -73,7 +75,6 @@
     "git.autofetch": true,
 
 
-
     //! Linting
 
     "python.linting.enabled": true,
@@ -93,10 +94,25 @@
     "python.linting.banditArgs": ["-s", "B101"],
 
 
+    
+    //! Extension: GitHub Issues and Pull Requests
+    //* Configure pull requests to use the branch title
+    "githubPullRequests.pullRequestTitle": "branch",
+
+
 
     //! Extension: Python Docstring Generator
     "autoDocstring.guessTypes": false,
     "autoDocstring.docstringFormat": "numpy",
+
+
+
+    //! Extension: reStructuredText
+    "restructuredtext.languageServer.disabled": false,
+    "restructuredtext.linter.name": "rstcheck",
+    "restructuredtext.confPath": "${workspaceFolder}\\docs_src",
+    "restructuredtext.builtDocumentationPath": "${workspaceFolder}\\docs",
+
 
 
     //! Extension: Shell Launcher
