@@ -1,7 +1,13 @@
 {
-    //! Environment Defaults
+    //! Experiments
+    "python.experiments.enabled": false,
+    "python.dataScience.enabled": false,
+    "workbench.enableExperiments": false,
+    "python.experiments.optOutFrom": ["All"],
+
 
     
+    //! Environment Defaults
     //* Use PowerShell Core as default integrated terminal for Windows
     //? "To install PowerShell on Windows, download and install package from our GitHub releases page." https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7
     "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
