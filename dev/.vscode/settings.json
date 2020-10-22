@@ -54,7 +54,7 @@
 
     //* Extension: Rewrap
     //? Default: 80
-    "rewrap.autoWrap.enabled": false,  // Toggle w/ ALT+Q. // ! Disable for markdown.
+    "rewrap.autoWrap.enabled": false,  // Toggle w/ ALT+Q. //! Disable for markdown.
     "rewrap.wrappingColumn": 88,
     "rewrap.wholeComment": false,
 
@@ -124,6 +124,7 @@
     "restructuredtext.linter.name": "rstcheck",
     "restructuredtext.confPath": "${workspaceFolder}\\docs",
     "restructuredtext.builtDocumentationPath": "${workspaceFolder}\\docs\\_build",
+    "restructuredtext.preview.scrollEditorWithPreview": false,
 
 
 
