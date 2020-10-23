@@ -1,3 +1,5 @@
+<!-- TODO: Convert to RST. -->
+
 # template-python-vscode
 
 Template repo for Python projects in VSCode.

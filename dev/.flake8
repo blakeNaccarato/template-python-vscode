@@ -1,16 +1,21 @@
 [flake8]
-        
+
         max-line-length = 88
-        
+
         ignore =
-                F401,  ; imported but unused, duplicates pylint(unused-import)
-                F821,  ; Undefined variable 'write_config', duplicates pylint(undefined-variable)
-                F841,  ; local variable 'workbooks' is assigned to but never used, duplicates pylint(unused-variable)
-                E203,  ; whitespace before ':', conflict with black
-                E262,  ; inline comment should start with '#', conflict with Better Comments extension
-                E265,  ; block comment should start with '#', conflict with Better Comments extension
-                E501,  ; line too long, duplicates pylint(line-too-long)
-                W291,  ; trailing whitespace, duplicates pylint(trailing-whitespace)
-                W292,  ; no newline at end of file, duplicates pylint(missing-final-newline)
-                W293,  ; blank line contains whitespace, duplicates pylint(trailing-whitespace)
-                W503,  ; line break before binary operator, conflict with black
+                ; duplicates pylint
+                F401,  ; imported but unused                                            dupes: unused-import
+                F821,  ; Undefined variable 'write_config'                              dupes: undefined-variable
+                F841,  ; local variable 'workbooks' is assigned to but never used       dupes: unused-variable
+                E501,  ; line too long                                                  dupes: line-too-long
+                W291,  ; trailing whitespace                                            dupes: trailing-whitespace
+                W292,  ; no newline at end of file                                      dupes: missing-final-newline
+                W293,  ; blank line contains whitespace                                 dupes: trailing-whitespace
+
+                ; conflict with black
+                E203,  ; whitespace before ':'
+                W503,  ; line break before binary operator
+
+                ; conflict with Better Comments extension
+                E262,  ; inline comment should start with '#'
+                E265,  ; block comment should start with '#'

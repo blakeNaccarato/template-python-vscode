@@ -10,7 +10,7 @@ here = pathlib.Path().resolve()
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
-    name="package",
+    name="package_name",
     version="0.0.0",
     description=("Package description."),
     long_description=long_description,

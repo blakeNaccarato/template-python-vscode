@@ -9,7 +9,9 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
+            // Use "integratedTerminal" if requesting input from stdin
             "console": "internalConsole",
+            "justMyCode": true,
         },
     ],
 }
