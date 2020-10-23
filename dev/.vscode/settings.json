@@ -124,8 +124,6 @@
     //! Extension: reStructuredText
     "restructuredtext.languageServer.disabled": false,
     "restructuredtext.linter.name": "rstcheck",
-    "restructuredtext.confPath": "${workspaceFolder}\\docs",
-    "restructuredtext.builtDocumentationPath": "${workspaceFolder}\\docs\\_build",
     "restructuredtext.preview.scrollEditorWithPreview": false,
 
 
