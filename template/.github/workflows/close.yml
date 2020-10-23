@@ -1,6 +1,6 @@
-# https://github.com/Logerfo/close-action
+# https://github.com/marketplace/actions/close-action
 
-name: Close
+name: close
 on:
   pull_request:
     types: [closed]

@@ -1,5 +1,4 @@
-# https://github.com/actions/starter-workflows/blob/main/ci/python-publish.yml
-# Modified to run when "changerelease" does.
+# https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
 
 name: publish
 

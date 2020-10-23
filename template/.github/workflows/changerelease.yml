@@ -1,12 +1,10 @@
-# https://github.com/dropseed/changerelease
-# TODO: Investigate workflow running twice when releasing using git-flow methodology
+# https://github.com/marketplace/actions/changerelease
 
 name: changerelease
 on:
   workflow_dispatch:
   push:
     paths: [CHANGELOG.md]
-    branches: [main]
     tags: ["*"]
 
 jobs:
