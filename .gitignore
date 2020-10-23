@@ -2,17 +2,17 @@
 # * CUSTOMIZATIONS
 
 # Project-specific
-.vscode
-.env
-.flake8
-.mypy.ini
-.pylintrc
-.rstcheck.cfg
-requirements.txt
+/.vscode
+/.env
+/.flake8
+/.mypy.ini
+/.pylintrc
+/.rstcheck.cfg
+/requirements.txt
 
 # reStructuredText
-docs/_build/*
-docs/_static/*
+/docs/_build/*
+/docs/_static/*
 
 # * -------------------------------------------------------------------------------- * #
 # * https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore
