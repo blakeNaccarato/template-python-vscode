@@ -1,3 +1,5 @@
+<!-- TODO: Convert to RST -->
+
 # Extensions
 
 The following is a list of useful VSCode Extensions. Click the header of each to see the extension in your browser. Click "Install" and allow Chrome to launch VSCode for each Extension that you want to install. In general, you can find out what an extension does by clicking the "Feature Contributions" tab near the top of the extension description while you're viewing it in VSCode. Below is a brief description of each extension.

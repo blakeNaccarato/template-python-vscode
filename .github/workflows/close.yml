@@ -1,5 +1,3 @@
-# This action will automatically close issues fixed in pull requests that doesn't target
-# the default branch. Only works for same repository references.
 # https://github.com/Logerfo/close-action
 
 name: Close
@@ -14,5 +12,5 @@ jobs:
     steps:
       - uses: Logerfo/close-action@0.0.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }} # The `GITHUB_TOKEN` secret.
-          comment: true # If `true`, will comment on the closing issue(s).
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          comment: true
