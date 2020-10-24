@@ -1,15 +1,18 @@
+# Run "pip install -U wheel pip; pip install -r .\requirements.txt"
+# Two stages so we can get wheel speed-ups in the second call to pip install.
+# Pip after wheel to gracefully hit "WinError 5" in Windows at end of first call.
+
 # install package in editable configuration
--e .
+-e .  # comment this out if there's no "setup.py"
 
 # build
+wheel  # just in case you only do "pip install -r requirements.txt"
 setuptools
-wheel
 twine
 
 # document
 sphinx
 sphinx-rtd-theme
-rstcheck
 
 # experiment
 jupyter
@@ -23,6 +26,7 @@ flake8
 flake8-bugbear
 mypy
 pylint
+rstcheck
 
 # refactor
 rope

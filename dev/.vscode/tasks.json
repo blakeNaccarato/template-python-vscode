@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sphinx-build",
+            "type": "shell",
+            "command": [
+                "sphinx-build",
+                    "${workspaceFolder}\\docs",
+                    "${workspaceFolder}\\docs\\_build\\html",
+                ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true,
+            }
+        }
+    ],
+}

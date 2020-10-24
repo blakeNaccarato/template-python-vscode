@@ -1,60 +1,78 @@
 {
-    //! Experiments
+    //! Load environment variables and activate Python virtual environment
+    "terminal.integrated.shellArgs.windows": [
+		"-NoExit",
+		"-Command",
+    	//? Load environment variables using Set-PsEnv (must "Install-Module Set-PsEnv")
+     //? May also need to "Update-Module Set-PsEnv"
+		"Set-PsEnv;",
+		//? Set terminal to local Python .venv in workspace folder\
+		"${workspaceFolder}\\.venv\\Scripts\\Activate.ps1;",
+    ],
+    
+
+    //! Extension: Python
+    //* Required to use Python from the virtual environment instead of global Python
+    "python.pythonPath": "${workspaceFolder}\\.venv\\scripts\\python.exe",
+    "python.testing.pytestEnabled": true,
+
+
+
+    //! Extension: Shell Launcher
+    "shellLauncher.shells.windows": [
+        {
+            //* Launches IPython in the virtual environment. Lets you try things out in without having to fire up an entire Jupyter notebook. Associated global keybind in "keybindings.json".
+            "label": "IPython (.venv)",
+            "shell": "pwsh.exe",
+            "args": ["-NoExit", "-Command", "python", "-m", "IPython"],
+        },
+    ],
+
+
+
+    //! Experiments and other settings
     "python.experiments.enabled": false,
     "python.dataScience.enabled": false,
     "workbench.enableExperiments": false,
     "python.experiments.optOutFrom": ["All"],
 
 
-    
+
     //! Environment Defaults
     //* Use PowerShell Core as default integrated terminal for Windows
     //? "To install PowerShell on Windows, download and install package from our GitHub releases page." https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7
     "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
 
 
-    //* Load environment variables and activate Python virtual environment
-    "terminal.integrated.shellArgs.windows": [
-		"-NoExit",
-		"-Command",
-    	//? Load environment variables using Set-PsEnv (must "Install-Module Set-PsEnv")
-        //? May also need to "Update-Module Set-PsEnv"
-		"Set-PsEnv;",
-		//? Set terminal to local Python .venv in workspace folder\
-		"${workspaceFolder}\\.venv\\Scripts\\Activate.ps1;",
-	],
-
-
 
     //! Line-width related options
 
-    
+
     //* Soft wrap settings
-    
+
     //? Set wrapping column
     "editor.wordWrapColumn": 88,
     "editor.rulers": [88],
 
-    //? Soft wrap only in markdown and JSON with Comments (aka VSCode settings)
+    //? Soft wrap in *.md, *.jsonc (like settings.json), and *.rst
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
     },
     "[jsonc]": {
-        "editor.wordWrap": "wordWrapColumn"
+        "editor.wordWrap": "wordWrapColumn",
+    },
+    "[restructuredtext]": {
+        "editor.wordWrap": "wordWrapColumn",
     },
 
-    
+
     //* Disable JSON format to prevent JSON with Comments reformat
     "json.format.enable": false,
 
 
     //* Formatting configuration
-    "python.formatting.provider": "black",
-    
-
-    //* Extension: Rewrap
-    //? Default: 80
-    "rewrap.autoWrap.enabled": false,  // Toggle w/ ALT+Q. //! Disable for markdown.
+    "python.formatting.provider": "black", //! Toggle w/ ALT+Q. Disable for markdown.
+    "rewrap.autoWrap.enabled": false,
     "rewrap.wrappingColumn": 88,
     "rewrap.wholeComment": false,
 
@@ -81,6 +99,7 @@
     "git.autofetch": true,
 
 
+    
     //! Linting
 
     "python.linting.enabled": true,
@@ -100,18 +119,10 @@
     "python.linting.banditArgs": ["-s", "B101"],
 
 
-    
+
     //! Extension: GitHub Issues and Pull Requests
     //* Configure pull requests to use the branch title
     "githubPullRequests.pullRequestTitle": "branch",
-
-
-
-    //! Extension: Python
-    //* Required to use Python from the virtual environment instead of global Python
-    //? Note that we cannot omit "\\scripts\\python.exe" due to an issue with the reStructuredText Extension.
-    //? https://github.com/vscode-restructuredtext/vscode-restructuredtext/issues/236
-    "python.pythonPath": "${workspaceFolder}\\.venv\\scripts\\python.exe",
 
 
 
@@ -125,16 +136,4 @@
     "restructuredtext.languageServer.disabled": false,
     "restructuredtext.linter.name": "rstcheck",
     "restructuredtext.preview.scrollEditorWithPreview": false,
-
-
-
-    //! Extension: Shell Launcher
-    "shellLauncher.shells.windows": [
-        {
-            //* Launches IPython in the virtual environment. Lets you try things out in without having to fire up an entire Jupyter notebook. Associated global keybind in "keybindings.json".
-            "label": "IPython (.venv)",
-            "shell": "pwsh.exe",
-            "args": ["-NoExit", "-Command", "python", "-m", "IPython"],
-        },
-    ],
 }

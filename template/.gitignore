@@ -10,9 +10,8 @@
 .rstcheck.cfg
 requirements.txt
 
-# reStructuredText
-docs/_build/*
-docs/_static/*
+# Sphinx, reStructuredText
+docs/_build
 
 # * -------------------------------------------------------------------------------- * #
 # * https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore
