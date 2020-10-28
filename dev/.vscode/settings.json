@@ -114,6 +114,11 @@
 
 
     //* Linting args
+
+    "python.sortImports.args": [
+        "--profile", "black",
+    ],
+    
     //? Ignore "assert" usage globally until bandit update plays nicely with pytest.
     //? https://www.evernote.com/client/web#?an=true&n=336116c2-1cc7-4240-9ac0-a0ff21a14494&
     "python.linting.banditArgs": ["-s", "B101"],
